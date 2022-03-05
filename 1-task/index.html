@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check the login</title>
+</head>
+<body>
+    <h1>Check the login - JavaScript Task</h1>
+    <h2>Task from <a href="https://javascript.info/logical-operators">javascript.info</a></h2>
+    <p>Write the code which asks for a login with prompt.</p>
+    <p>If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc, show “Canceled”, if it's another string, then show “I don't know you”.</p>
+    <p>The password is checked as follows:</p>
+    <ul>
+        <li>If it equals “TheMaster”, then show “Welcome!”,</li>
+        <li>Another string, show “Wrong password”,</li>
+        <li>For an empty string or cancelled input, show “Canceled”</li>
+    </ul>
+
+    <script>
+        let userName = prompt("Hello, user. What's your name?");
+        if (userName == "Admin"){
+            let password = prompt("Insert password:");
+            if(password === 'TheMaster'){
+                alert('Welcome!');
+            }else if(password == " " || password == null){
+                alert('Canceled');
+            }else{
+                alert('Wrong password');
+            }
+        } else if(userName == " " || userName == null){
+            alert('Canceled')
+        }else{
+            alert("I don't know you");
+        }
+
+    </script>
+    
+</body>
+</html>
